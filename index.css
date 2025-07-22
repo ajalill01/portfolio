@@ -258,7 +258,7 @@ footer{
     }
 
     .open-sidebar-button{
-        padding-block: 10px;
+        padding-block: 0px;
     }
 
     #sidebar-active:checked ~ .nav-links{
