@@ -80,6 +80,10 @@ body{
         cursor: pointer;
 }
 
+a:focus, button:focus, input:focus, label:focus {
+    outline: none;
+}
+
 /* header-end */
 
 .hero{
