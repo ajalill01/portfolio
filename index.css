@@ -291,6 +291,14 @@ footer{
 .nav-links a:hover::before{
     width : 100%;
 } */
+
+
+
+    .nav-bar{
+
+    padding : 0.1rem 5%;;
+}
+
 }
 
 @media (max-width : 768px) {
