@@ -257,6 +257,10 @@ footer{
         display : block;
     }
 
+    .open-sidebar-button{
+        padding-block: 10px;
+    }
+
     #sidebar-active:checked ~ .nav-links{
         right : 0;
     }
