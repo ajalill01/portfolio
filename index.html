@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+
+    <nav class="nav-bar">
+        <div class="logo"></div>
+        <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        
+            <label id="overlay" for="sidebar-active"></label>
+
+        <ul class="nav-links">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hire">Hire Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Full-Stack Devoloper</h1>
+            <p>Building digital experiences that merge creativity with technology</p>
+            <div class="highlight">Specializing in modern web devolopment and cyber systems</div>
+            <a href="#contact" class="cta-button">Let's contact</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="assets/WIN_20250430_07_17_08_Pro.jpg" alt="Profile" class="profile-img">
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="skills-grid">
+            <div class="skills-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Frontend Devlopment</h3>
+                <P>HTML5, CSS3, JavaScript</P>
+            </div>
+            <div class="skills-card">
+                <i class="fa-solid fa-server"></i>
+                <h3>Backend Devlopment</h3>
+                <P>Node.js, MongoDB atlas</P>
+            </div>
+            <div class="skills-card">
+                <i class="fa-solid fa-paintbrush"></i>
+                <h3>UI/UX Design</h3>
+                <P>Figma, Canvas</P>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 ajalil01, All rights reserved</p>
+        <div class="social-links">
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
