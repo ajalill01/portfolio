@@ -18,6 +18,7 @@ body{
     color : var(--text);
     line-height: 1.6;
     overflow-x: hidden;
+        user-select: none;
 }
 
 
@@ -245,4 +246,22 @@ body{
 
   
 }
+}
+
+
+ @keyframes appears {
+    from{
+        opacity : 0;
+    }
+    to{
+        opacity : 1;
+
+
+    }
+}   
+
+.element{
+    animation: appears  linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
 }

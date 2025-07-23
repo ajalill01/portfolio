@@ -13,11 +13,14 @@
     --text : #fff;
 }
 
+
+
 body{
     background-color: var(--dark-bg);
     color : var(--text);
     line-height: 1.6;
     overflow-x: hidden;
+        user-select: none;
 }
 
 .nav-bar{
@@ -189,6 +192,77 @@ a:focus, button:focus, input:focus, label:focus {
 }
 
 
+.ex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5%;
+        background: var(--darker-bg);
+
+}
+
+.ex h1{
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.ex .title{
+    font-size: 1.5em;
+        margin-bottom: 1em;
+}
+
+.ex img{
+        width : 70%;   
+        margin-bottom: 1.2em;
+
+}
+
+.ex a {
+  position: relative;
+  font-size: 1.05em;
+  font-weight: 500; 
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  padding: 0.2em 0;
+  
+
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left 85%;
+}
+
+.ex a:hover {
+  color: var(--accent-hover);
+  transform: translateY(-1px);
+  background-size: 100% 2px;
+}
+
+.ex a:active {
+  transform: translateY(0);
+}
+
+
+.ex a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ex a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 /* footer */
 
 footer{
@@ -332,6 +406,15 @@ footer{
     .hero-content h1{
         font-size : 3em;
     }
+    .ex h1{
+    font-size: 1.5em;
+}
+
+.ex .title{
+    font-size: 1em;
+
+}
+
 }
 
 @media (max-width : 540px){
@@ -354,5 +437,69 @@ footer{
         font-size: 0.9em;
 
     }
+
+
+.ex h1{
+    font-size: 1.2em;
+}
+
+.ex .title{
+    font-size: 0.9em;
+
+}
+
     
+}
+
+
+@keyframes appear {
+    from{
+        opacity : 0.5;
+    }
+    to{
+        opacity : 1;
+    }
+}
+#home{
+animation: appear 2s linear;
+}
+
+ @keyframes appears {
+    from{
+        opacity : 0;
+        scale: 0.5;
+    }
+    to{
+        opacity : 1;
+                scale: 1;
+
+    }
+}   
+
+.skills-card{
+    animation: appears  linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+
+ @keyframes appearss {
+    from{
+        opacity : 0;
+    }
+    to{
+        opacity : 1;
+
+
+    }
+}   
+
+.ex section .title{
+    animation: appearss  linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+.ex img{
+    animation: appearss  linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
 }
