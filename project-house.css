@@ -1,0 +1,248 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --dark-bg : #0a0a0a;
+    --darker-bg : #050505;
+    --accent : #3a86ff;
+    --accent-glow : rgba(58, 134, 255, 0.4);
+    --text : #fff;
+}
+
+body{
+    background-color: var(--dark-bg);
+    color : var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+.back-button {
+  /* margin-bottom:30px ;
+  margin-top: 30px;
+  margin-left: 30px; */
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--text);
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5em;
+  box-shadow: 0 4px 20px var(--accent-glow);
+  
+
+  border: none;
+  outline: none;
+  user-select: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+      position: fixed;
+    top:30px;
+    left:30px;
+
+}
+
+
+.back-button:hover,
+.back-button:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px var(--accent-glow);
+}
+
+.back-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px var(--accent-glow);
+}
+
+.back-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.back-button:focus:not(:active)::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+.hero{
+    margin-top: 4em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+.part{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+        font-size : 2em;
+            color: var(--accent);
+
+}
+
+.title{
+    color: var(--accent);
+    font-size : 3em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom : 0.5em;
+        text-align: center;
+}
+
+.description{
+    color: var(--text);
+    font-size : 2em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline:10%; 
+    justify-content: center;
+    text-align: center;
+        margin-bottom : 1em;
+}
+
+.hero img{
+        display : flex;
+    flex-direction: column;
+    align-items: center;
+    width : 50%;   
+    justify-content: center;
+}
+
+.element{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5em;   
+}
+
+.element .text-element{
+    color: var(--text);
+    font-size : 1.5em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline:10%; 
+    justify-content: center;
+    text-align: center;
+    margin-bottom : 1em;   
+}
+
+.element img{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    width : 50%;   
+    justify-content: center;
+}
+
+
+@media (max-width : 1000px) {
+    .title{
+    color: var(--accent);
+    font-size : 2em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom : 0.5em;
+        text-align: center;
+}
+
+.description{
+    color: var(--text);
+    font-size : 1.2em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline:10%; 
+    justify-content: center;
+    text-align: center;
+        margin-bottom : 1em;
+}
+
+.part{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+        font-size : 1.5em;
+            color: var(--accent);
+
+}
+
+.element .text-element{
+    color: var(--text);
+    font-size : 1em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline:10%; 
+    justify-content: center;
+    text-align: center;
+    margin-bottom : 1em;   
+}
+.back-button {
+  width: 50px;
+  height: 50px;
+
+  font-size: 1em;
+
+  
+}
+}
+
+
+@media (max-width : 500px){
+.description{
+    color: var(--text);
+    font-size : 0.9em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline:10%; 
+    justify-content: center;
+    text-align: center;
+        margin-bottom : 1em;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+
+  font-size: 0.7em;
+
+  
+}
+}
