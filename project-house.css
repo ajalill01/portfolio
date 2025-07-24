@@ -250,19 +250,42 @@ body{
 }
 
 
- @keyframes appears {
-    from{
-        opacity : 0;
-    }
-    to{
-        opacity : 1;
 
 
-    }
-}   
+.element {
+  will-change: transform, opacity; /* Improves performance */
+}
 
-.element{
-    animation: appears  linear;
-    animation-timeline: view();
-    animation-range: entry 0%;
+/* Hero animations */
+.hero .title {
+  animation: heroTitle 1s ease-out both;
+}
+
+.hero .description {
+  animation: heroDesc 1s 0.2s ease-out both;
+}
+
+.hero img {
+  animation: heroImage 1s 0.3s ease-out both;
+}
+
+@keyframes heroTitle {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+}
+
+@keyframes heroDesc {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+
+@keyframes heroImage {
+  from {
+    transform: translateY(50px) scale(0.95);
+    opacity: 0;
+  }
 }

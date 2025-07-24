@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="projects.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>projects</title>
@@ -97,6 +99,40 @@
 
         </div>
     </footer>
+
+
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Select all .duo elements
+    const duoElements = gsap.utils.toArray('.duo');
+    
+    // Create animation for each .duo element
+    duoElements.forEach(duo => {
+      gsap.fromTo(duo, 
+        {
+          opacity: 0,
+          scale: 0.5
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: duo,
+            start: "top 80%", // When the top of the element hits 80% of viewport
+            toggleActions: "play none none none", // play on enter, no other actions
+            markers: false // Set to true to debug scroll positions
+          }
+        }
+      );
+    });
+  });
+</script>
+
 
 </body>
 </html>

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <title>Portfolio</title>
 </head>
 
@@ -34,7 +36,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Full-Stack Devoloper</h1>
-            <p>Ahmed Abdeldjalil third year AI</p>
+            <p>Ahmed Abdeldjalil AI student</p>
             <div class="highlight">Building experiences that make your business improves</div>
             <a href="#contact" class="cta-button">Contact me</a>
         </div>
@@ -99,6 +101,27 @@
     </footer>
 
     <script src="script.js"></script>
-
+    <script>
+  gsap.registerPlugin(ScrollTrigger);
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    gsap.utils.toArray('.ex section > *').forEach(element => {
+      gsap.fromTo(element, 
+        { opacity: 0, y: 20 },
+        { 
+          opacity: 1, 
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
+  });
+</script>
 </body>
 </html>
